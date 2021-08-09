@@ -1,0 +1,42 @@
+{
+  "name": "webev-utils",
+  "version": "1.0.0",
+  "description": "webev-utils for webev app",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "run-p build:*",
+    "build:common": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "test": "jest",
+    "lint": "eslint \"./**/*.{js,jsx,ts,tsx}\""
+  },
+  "volta": {
+    "node": "14.17.4"
+  },
+  "devDependencies": {
+    "@jest/types": "^27.0.6",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.4",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
